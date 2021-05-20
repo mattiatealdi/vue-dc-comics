@@ -5,16 +5,7 @@
       </div>
       <nav>
           <ul>
-              <li><a href="#">CHARACTERS</a></li>
-              <li><a href="#">COMICS</a></li>
-              <li><a href="#">MOVIES</a></li>
-              <li><a href="#">TV</a></li>
-              <li><a href="#">GAMES</a></li>
-              <li><a href="#">COLLECTIBLES</a></li>
-              <li><a href="#">VIDEOS</a></li>
-              <li><a href="#">FANS</a></li>
-              <li><a href="#">NEWS</a></li>
-              <li><a href="#">SHOP</a></li>
+              <li v-for="(link, index) in links" :key="index"> <a :class="{'active': link.current}" :href="link.url">{{ link.text }}</a></li>
           </ul>
       </nav>
   </header>
@@ -23,7 +14,69 @@
 <script>
 export default {
     name: 'HeaderComp',
+
+    data(){
+    // i data nei template sono una funzione che restituisce un oggetto
+    return{
+      links:[
+        {
+          text:'CHARACTERS',
+          url: '/',
+          current: false
+        },
+        {
+          text:'COMICS',
+          url: '#',
+          current: true
+        },
+        {
+          text:'MOVIES',
+          url: '#',
+          current: false
+        },
+        {
+          text:'TV',
+          url: '#',
+          current: false
+        },
+        {
+          text:'GAMES',
+          url: '#',
+          current: false
+        },
+        {
+          text: 'COLLECTIBLES',
+          url: '#',
+          current: false
+        },
+        {
+          text: 'VIDEOS',
+          url: '#',
+          current: false
+        },
+        {
+          text: 'FANS',
+          url: '#',
+          current: false
+        },
+        {
+          text: 'NEWS',
+          url: '#',
+          current: false
+        },
+        {
+          text: 'SHOP',
+          url: '#',
+          current: false
+        }
+      ]
+    }
+  }
+
+
 }
+
+
 </script>
 
 <style lang="scss" scoped>
@@ -50,10 +103,21 @@ header{
                 a{
                     font-size: 0.7rem;
                     color: #1B2D3C;
+                    &:hover{
+                        color: #0088FF;
+                        padding-bottom: 40px;
+                        border-bottom: 3px solid #0088FF;
+                    }
                 }
             }
         }
     }
+}
+
+.active{
+    color: #0088FF;
+    padding-bottom: 40px;
+    border-bottom: 3px solid #0088FF;
 }
 
 </style>
