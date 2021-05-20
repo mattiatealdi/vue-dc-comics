@@ -34,28 +34,6 @@ export default {
   
 }
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-ul{
-  list-style-type: none;
-}
-
-a{
-  text-decoration: none;
-}
-
-.container{
-  width: 40%;
-  padding-left: 200px;
-}
-
-.wrapper{
-  width: 80%;
-  margin: 0 auto;
-}
+@import 'assets/style/general.scss';
 
 </style>

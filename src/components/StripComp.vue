@@ -17,10 +17,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+@import '../assets/style/vars.scss';
+
     div{
         height: 120px;
         width: 100%;
-        background-color: #0082F8;
+        background-color: $dc-color;
         ul{    
             display: flex;
             li{

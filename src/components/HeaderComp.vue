@@ -81,11 +81,13 @@ export default {
 
 <style lang="scss" scoped>
 
+@import '../assets/style/vars.scss';
+
 header{
-    height: 100px;
+    height: $height-100;
     width: 100vw;
     .logo{
-        height: 100px;
+        height: $height-100;
         float:left;
         img{
             width: 80px;
@@ -104,9 +106,9 @@ header{
                     font-size: 0.7rem;
                     color: #1B2D3C;
                     &:hover{
-                        color: #0088FF;
+                        color: $dc-color;
                         padding-bottom: 40px;
-                        border-bottom: 3px solid #0088FF;
+                        border-bottom: 3px solid $dc-color;
                     }
                 }
             }
