@@ -38,8 +38,10 @@
                 <li>DC Power Visa</li>
             </ul>
         </div>
+        <div class="logo-footer">
 
-        <img src="../assets/img/dc-logo-bg.png" alt="">
+        </div>
+        
 
     </div>
     <div class="footer-bottom">
@@ -93,12 +95,15 @@ export default {
             }
         }
             
-        img{
+        .logo-footer{
             float:right;
-            width: 35%;
-            margin: -40px 200px 0 0;
-            z-index: 0;
-            
+            width: 40%;
+            height: 100%;
+            margin: 0px 200px 0px 0;
+            /* margin: */
+            background-image: url('../assets/img/dc-logo-bg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
        }
@@ -106,7 +111,6 @@ export default {
        .footer-bottom{
            height: 100px;
            background-color: #303030;
-           z-index: 999;
 
            .container{
                float:left;
@@ -120,11 +124,26 @@ export default {
                color: white;
            }
 
-           .right-container{
+           .container-right{
                width: 50%;
-               background:red;
                height: 100%;
                float:right;
+               ul{
+                   display: flex;
+                   margin-left: 50px;
+                   
+                   li{
+                       padding: 30px 10px;
+                       font-size: 0.75rem;
+                       img{
+                           width: 30px;
+                       }
+                       h3{
+                           padding-top: 10px;
+                           color: #0088FF;
+                       }
+                   }
+               }
            }
        }
     }
