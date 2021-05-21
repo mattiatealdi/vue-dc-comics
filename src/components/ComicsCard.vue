@@ -22,13 +22,11 @@ export default {
         img{
             width: 80%;
             overflow: hidden;
-            
         }
         span{
             font-size: 15px;
             height: 0px;
-            margin-top: -20px;
-            align-self: start;
+            margin-top: -30px;
         }
     }
 </style>

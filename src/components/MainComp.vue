@@ -53,13 +53,13 @@ export default {
 
         .comics-container{
             background-color: #1C1C1C;
-            height: 1000px;
+            /* height: 1000px; */
         }
 
         
         div{
             color: white;
-            line-height: 100px; // WHILE CHANGING MAIN DIMENSIONS DISCARD THIS LINE
+            /* line-height: 100px; */ // WHILE CHANGING MAIN DIMENSIONS DISCARD THIS LINE
             font-size: 2rem;
         }
     }
