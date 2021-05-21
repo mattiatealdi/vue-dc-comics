@@ -71,6 +71,14 @@ export default {
         }
       ]
     }
+  },
+
+  methods:{
+    /* setActive(index){
+      this.links.forEach((link) => {
+        link.current = false;
+      }
+    } */
   }
 
 
