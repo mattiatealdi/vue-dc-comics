@@ -25,8 +25,9 @@ export default {
         }
         span{
             font-size: 15px;
-            height: 0px;
-            margin-top: -30px;
+            display: block;
+            margin-top: -5px;
+            padding-bottom: 10px;
         }
     }
 </style>

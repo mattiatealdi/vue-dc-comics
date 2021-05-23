@@ -5,7 +5,7 @@
       </div>
       <nav>
           <ul>
-              <li v-for="(link, index) in links" :key="index"> <a :class="{'active': link.current}" :href="link.url">{{ link.text }}</a></li>
+              <li v-for="(link, index) in links" :key="index"> <a @click="setActive(index)" :class="{'active': link.current}" :href="link.url">{{ link.text }}</a></li>
           </ul>
       </nav>
   </header>
@@ -21,52 +21,52 @@ export default {
       links:[
         {
           text:'CHARACTERS',
-          url: '/',
+          url: 'javascript:void(0)',
           current: false
         },
         {
           text:'COMICS',
-          url: '#',
-          current: true
+          url: 'javascript:void(0)',
+          current: false
         },
         {
           text:'MOVIES',
-          url: '#',
+          url: 'javascript:void(0)',
           current: false
         },
         {
           text:'TV',
-          url: '#',
+          url: 'javascript:void(0)',
           current: false
         },
         {
           text:'GAMES',
-          url: '#',
+          url: 'javascript:void(0)',
           current: false
         },
         {
           text: 'COLLECTIBLES',
-          url: '#',
+          url: 'javascript:void(0)',
           current: false
         },
         {
           text: 'VIDEOS',
-          url: '#',
+          url: 'javascript:void(0)',
           current: false
         },
         {
           text: 'FANS',
-          url: '#',
+          url: 'javascript:void(0)',
           current: false
         },
         {
           text: 'NEWS',
-          url: '#',
+          url: 'javascript:void(0)',
           current: false
         },
         {
           text: 'SHOP',
-          url: '#',
+          url: 'javascript:void(0)',
           current: false
         }
       ]
@@ -79,6 +79,13 @@ export default {
         link.current = false;
       }
     } */
+
+    setActive(index){
+            this.links.forEach((link) => {
+                link.current = false;
+            })
+            this.links[index].current = true;
+        }
   }
 
 
